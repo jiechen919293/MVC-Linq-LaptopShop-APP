@@ -1,0 +1,33 @@
+﻿@model List<Laptop>
+    <h2>6. These are Laptops' brand and year/price fliter :</h2>
+    <br />
+    @using (Html.BeginForm())
+    {
+        <div>
+            Select Brand :  @Html.DropDownList("Name")
+            <input type="submit" value="Select Brand" />
+        </div>
+        <div>
+            Select Order :  @Html.DropDownList("OrderChoices")
+            <input type="submit" value="Select Order" />
+        </div>
+        <div>
+            Select Input Number :  @Html.Editor("Number")
+            <input type="submit" value="Input number" />
+            <ul>
+                <li>Year input range : 2016-2020 --Find All laptops newer than your choice year.</li>
+                <li>Price input range : 899.99-2599.99 --Find All laptops cheaper than your input price.</li>
+            </ul>
+
+        </div>
+    }
+    @if (Model != null)
+    {
+        foreach (var laptop in Model)
+        {
+            <li>
+                Laptop: @laptop.Model  Price: @laptop.Price Year: @laptop.Year
+            </li>
+            <br />
+        }
+    }

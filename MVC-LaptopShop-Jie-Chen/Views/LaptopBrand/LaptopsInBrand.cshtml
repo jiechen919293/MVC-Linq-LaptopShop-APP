@@ -1,0 +1,20 @@
+﻿@model Dictionary<string, List<Laptop>>
+
+<h2>7. All Laptops grouped by their make:</h2>
+<br />
+<ul>
+    @foreach (var group in Model)
+    {
+        <li>
+            @group.Key : <br />
+            <ul>
+                @foreach (var laptop in group.Value)
+                {
+                <li>
+                    Laptop: @laptop.Model  Price: @laptop.Price Year: @laptop.Year
+                </li>
+                }
+            </ul>
+        </li>
+    }
+</ul>

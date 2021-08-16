@@ -1,0 +1,25 @@
+﻿@model List<Laptop>
+    <h2>5. These are Laptops brand in the Shop:</h2>
+    <br />
+    @using (Html.BeginForm())
+    {
+        <div>
+            Select Brand :  @Html.DropDownList("Name")
+            <input type="submit" value="Select Brand" />
+        </div>
+        <div>
+            Select Brand :  @Html.DropDownList("OrderChoices")
+            <input type="submit" value="Select Order" />
+        </div>
+
+    }
+    @if (Model != null)
+    {
+        foreach (var laptop in Model)
+        {
+            <li>
+                Laptop: @laptop.Model  Price: @laptop.Price Year: @laptop.Year
+            </li>
+            <br />
+        }
+    }

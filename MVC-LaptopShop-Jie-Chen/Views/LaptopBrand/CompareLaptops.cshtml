@@ -1,0 +1,26 @@
+﻿@model List<Laptop>
+
+<h2>4. These are the laptops In the Shop you can compare :</h2>
+<br />
+@using (Html.BeginForm())
+{
+    <div>
+        Choose Laptop1 :  @Html.DropDownList("id1")
+
+    </div>
+    <div>
+        Choose Laptop2 :  @Html.DropDownList("id2")
+        <br />
+        <input type="submit" value="Submit Compare" />
+    </div>
+}
+@if (Model != null)
+{
+    foreach (var laptop in Model)
+    {
+        <li>
+            Laptop: @laptop.Model    Price: @laptop.Price     Year: @laptop.Year
+        </li>
+        <br />
+    }
+}

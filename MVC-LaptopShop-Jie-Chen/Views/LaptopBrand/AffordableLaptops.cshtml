@@ -1,0 +1,23 @@
+﻿@model List<Laptop>
+
+<h2>3. These are affordable Laptops with input of your max price in the Shop:</h2>
+<br/>
+@using (Html.BeginForm())
+{
+    <div>
+        Input Price :  @Html.Editor("Price")
+        <input type="submit" value="Input the Max Price" />
+
+    </div>
+}
+@if (Model != null)
+{
+    foreach (var laptop in Model)
+    {
+        <li>
+            Laptop: @laptop.Model  Price: @laptop.Price Year: @laptop.Year
+        </li>
+        <br />
+    }
+}
+

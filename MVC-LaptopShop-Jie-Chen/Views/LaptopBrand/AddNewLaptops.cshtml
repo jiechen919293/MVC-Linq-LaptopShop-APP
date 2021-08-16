@@ -1,0 +1,30 @@
+﻿@model List<Laptop>
+
+<h2>8. Add some new Laptops in this shop:</h2>
+<br />
+@using (Html.BeginForm())
+{<div>
+        Select Brand :   @Html.DropDownList("Name")
+    </div>
+    <div>
+        Input Laptype :  @Html.Editor("laptype")
+    </div>
+    <div>
+        Input Price :    @Html.Editor("Price")
+    </div>
+    <div>
+        Input number :   @Html.Editor("Num")
+        <input type="submit" value="Input the Number you want to make" />
+    </div>
+
+}
+@if (Model != null)
+{
+    foreach (var laptop in Model)
+    {
+        <li>
+          Brand: @laptop.Brand.Name    Laptop: @laptop.Model    Price: @laptop.Price    Year: @laptop.Year
+        </li>
+        <br />
+    }
+}

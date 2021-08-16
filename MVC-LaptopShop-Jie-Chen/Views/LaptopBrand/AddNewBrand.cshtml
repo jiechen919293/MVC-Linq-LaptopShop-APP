@@ -1,0 +1,27 @@
+﻿@model List<Brand>
+
+<h2>9. Add a new brand in this shop:</h2>
+<br />
+<ul>
+    @foreach (var brand in Model)
+    {
+        <li>
+            @brand.Name : <br />
+            <ul>
+                @foreach (var laptop in brand.Laptops)
+                {
+                    <li>
+                        Laptop: @laptop.Model  Price: @laptop.Price Year: @laptop.Year
+                    </li>
+                }
+            </ul>
+        </li>
+    }
+</ul>
+@using (Html.BeginForm())
+{
+    <div>
+        Add new brand : @Html.Editor("Brand") <br />
+        <input type="submit" value="Add New Brand" />
+    </div>
+}

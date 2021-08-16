@@ -1,0 +1,14 @@
+﻿@model List<Laptop>
+
+<h2>2. These are the top Three cheap laptops in the Shop:</h2>
+<br/>
+@if (Model != null)
+{
+    foreach (var laptop in Model)
+    {
+        <li>
+            Laptop: @laptop.Model    Price: @laptop.Price    Year: @laptop.Year
+        </li>
+
+    }
+}

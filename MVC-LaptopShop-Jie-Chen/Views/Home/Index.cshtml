@@ -1,0 +1,134 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+</div>
+
+<h2>This is an exam index table</h2>
+<h4>Jie-Chen-SD115</h4>
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>View Name</td>
+            <td>View Address</td>
+            <td>Check List</td>
+        </tr>
+    </thead>
+    <tbody id="content">
+        <tr>
+            <td>1</td>
+            <td>Show the TOP 2 expensive laps</td>
+            <td>
+                <a asp-area="" asp-controller="LaptopBrand" asp-action="LaptopTopExpensiveTwo">
+                    LaptopTopExpensiveTwo
+                </a>
+            </td>
+            <td>
+                <input type="checkbox" name=”checkbox_name” value=”checked_value”>
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Show the TOP 3 cheap laps</td>
+            <td>
+                <a asp-area="" asp-controller="LaptopBrand" asp-action="LaptopTopCheapThree">
+                    LaptopTopCheapThree
+                </a>
+            </td>
+            <td>
+                <input type="checkbox" name=”checkbox_name” value=”checked_value”>
+            </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Show Affordable Laptops with input of max price</td>
+            <td>
+                <a asp-area="" asp-controller="LaptopBrand" asp-action="AffordableLaptops">
+                    AffordableLaptops
+                </a>
+            </td>
+            <td>
+                <input type="checkbox" name=”checkbox_name” value=”checked_value”>
+            </td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Show the 2 selected Laptops to compare</td>
+            <td>
+                <a asp-area="" asp-controller="LaptopBrand" asp-action="CompareLaptops">
+                    CompareLaptops
+                </a>
+            </td>
+            <td>
+                <input type="checkbox" name=”checkbox_name” value=”checked_value”>
+            </td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Show the selected brand with year/price order</td>
+            <td>
+                <a asp-area="" asp-controller="LaptopBrand" asp-action="SelectLaptopsBrand">
+                    SelectLaptopsBrand
+                </a>
+            </td>
+            <td>
+                <input type="checkbox" name=”checkbox_name” value=”checked_value”>
+            </td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Show the select brand with year/price filter </td>
+            <td>
+                <a asp-area="" asp-controller="LaptopBrand" asp-action="SelectLaptopsWithFilter">
+                    SelectLaptopsWithFilter
+                </a>
+            </td>
+            <td>
+                <input type="checkbox" name=”checkbox_name” value=”checked_value”>
+            </td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Show All Laptops in Brand</td>
+            <td>
+                <a asp-area="" asp-controller="LaptopBrand" asp-action="LaptopsInBrand">
+                    LaptopsInBrand
+                </a>
+            </td>
+            <td>
+                <input type="checkbox" name=”checkbox_name” value=”checked_value”>
+            </td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Show Add new laptop page</td>
+            <td>
+                <a asp-area="" asp-controller="LaptopBrand" asp-action="AddNewLaptops">
+                    AddNewLaptops
+                </a>
+            </td>
+            <td>
+                <input type="checkbox" name=”checkbox_name” value=”checked_value”>
+            </td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Show Add new brand page</td>
+            <td>
+                <a asp-area="" asp-controller="LaptopBrand" asp-action="AddNewBrand">
+                    AddNewBrand
+                </a>
+            </td>
+            <td>
+                <input type="checkbox" name=”checkbox_name” value=”checked_value”>
+            </td>
+        </tr>
+       
+    </tbody>
+</table>
